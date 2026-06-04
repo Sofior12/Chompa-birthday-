@@ -1,0 +1,100 @@
+# Chompa-birthday-<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>শুভ জন্মদিন চম্পা ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    margin-top:80px;
+    padding:20px;
+}
+
+h1{
+    font-size:45px;
+}
+
+p{
+    font-size:22px;
+    line-height:1.8;
+    max-width:800px;
+    margin:auto;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4081;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#msg{
+    display:none;
+    margin-top:25px;
+    font-size:24px;
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+    from{transform:translateY(-100px);}
+    to{transform:translateY(100vh);}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎂 শুভ জন্মদিন চম্পা ❤️</h1>
+
+    <p>
+        প্রিয় চম্পা,<br><br>
+        আজ তোমার জীবনের সবচেয়ে সুন্দর দিনগুলোর একটি। 🌹<br>
+        আমি চাই তুমি সবসময় হাসিখুশি থাকো এবং তোমার সব স্বপ্ন পূরণ হোক। ✨<br>
+        তুমি আমার জীবনের সবচেয়ে বিশেষ মানুষ। ❤️
+    </p>
+
+    <button onclick="showMessage()">🎁 সারপ্রাইজ দেখো</button>
+
+    <div id="msg">
+        ❤️ আমি তোমাকে অনেক ভালোবাসি চম্পা ❤️<br>
+        🌹 শুভ জন্মদিন আমার রানী 🌹
+    </div>
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("msg").style.display="block";
+}
+
+for(let i=0;i<40;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+    heart.style.animationDuration=(3+Math.random()*4)+"s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
